@@ -1,7 +1,7 @@
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class main {
+public class Mortagecalculator {
     public static void main(String[] args) {
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
