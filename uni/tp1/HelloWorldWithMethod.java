@@ -2,7 +2,7 @@ package uni.tp1;
 
 public class HelloWorldWithMethod {
     public void Hello() {
-        System.out.println("You’re Welcome");
+        System.out.println("ur Welcome");
     }
 
     public static void main(String[] args) {
