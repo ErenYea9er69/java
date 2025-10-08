@@ -1,8 +1,8 @@
 package td1;
 
-
 public class Main {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+       Dictionnaire d1 = new Dictionnaire(null, 0);
         Dictionnaire d = new Dictionnaire("dictionnaire", 3);
         Mot_dict m1 = new Mot_dict("salem", "3aslema");
         Mot_dict m2 = new Mot_dict("rise", "9oum 3al sbe7");
@@ -18,9 +18,10 @@ public class Main {
 
         d.Supprimer_mot(m2);
         d.Lister_dictionnaire();    
-
         d.Nombre_synonymes(m1);
 
     }
+
+  }
     
-}
+

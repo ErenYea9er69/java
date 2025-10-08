@@ -1,7 +1,5 @@
 package td1;
 
-
-
 public class Dictionnaire {
 
     private int nb_mots;
