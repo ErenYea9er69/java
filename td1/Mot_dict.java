@@ -17,24 +17,24 @@ public class Mot_dict {
         return definition;
     }
 
-    public String setMot(String a){
-        return definition=a;
-    }
-    public String setDefinition(String a){
-        return mot=a;
+    public void setMot(String mot) {
+        this.mot = mot;
     }
 
-    public Boolean synonyme(String a) {
-        return (mot.equals(a));
+    public void setDefinition(String definition) {
+        this.definition = definition;
+    }
+
+    public boolean synonyme(String mot) {
+        return this.mot.equalsIgnoreCase(mot);
+    }
+
+    public Boolean equals(Mot_dict a) {
+        return (mot.equals(a.mot) && definition.equals(a.definition));
     }
 
     @Override
     public String toString() {
-        return "Mot_dict{" + "mot='" + mot +'\'' +", definition='" + definition + '\'' + '}';
-
-
-
-
-    
-}
+        return "Mot: " + mot + ", Definition: " + definition;
+    }
 }

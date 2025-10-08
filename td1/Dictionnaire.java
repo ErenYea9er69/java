@@ -13,12 +13,12 @@ public class Dictionnaire {
     }
 
     void Ajouter_mot(Mot_dict m){
-        if (Dict.length < 0){
+        if (nb_mots < 0){
             Dict[0]=m;
 
         }
         else{
-            for (int i=0; i<Dict.length;i++){
+            for (int i=0; i<nb_mots;i++){
                 if (Dict[i]==null){
                     Dict[i]=m;
                     break;
@@ -32,8 +32,8 @@ public class Dictionnaire {
 
 
 void Trier(){
-    for (int i=0; i<Dict.length-1;i++){
-        for (int j=i+1; j<Dict.length;j++){
+    for (int i=0; i<nb_mots-1;i++){
+        for (int j=i+1; j<nb_mots;j++){
             if (Dict[i].getMot().compareTo(Dict[j].getMot())>0){
                 Mot_dict t=Dict[i];
                 Dict[i]=Dict[j];
@@ -47,11 +47,13 @@ void Trier(){
 }
 
 void Supprimer_mot(Mot_dict a){
-    for (int i=0; i<Dict.length;i++){
+    for (int i=0; i<nb_mots;i++){
 
         if (Dict[i].synonyme(a.getMot()   )){
             Dict[i]=null;
+            nb_mots--;
             break;
+            
         }
     }
 
@@ -61,7 +63,7 @@ void Supprimer_mot(Mot_dict a){
 String Recherche_dicho(String mot){
 
     int i=0;
-    int n=Dict.length-1;
+    int n=nb_mots-1;
     String s="";
     boolean t=false;
     while (n!=0 && t==false){
@@ -100,7 +102,7 @@ void Lister_dictionnaire(){
 
 int Nombre_synonymes(Mot_dict a){
     int s=0;
-    for (int i=0; i<Dict.length;i++){
+    for (int i=0; i<nb_mots;i++){
         if (Dict[i].synonyme(a.getMot()   )){
             s++;
         }
@@ -109,8 +111,6 @@ int Nombre_synonymes(Mot_dict a){
         
 
     
-
-
 }
 
 }
