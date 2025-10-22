@@ -2,12 +2,6 @@ package tp6;
 
 public class Bibliotheque {
     private Document[] listdoc;
-    private Document[] listdc;
-    private Document[] listar;
-    private Document[] listlv;
-    private Document[] listper;
-
-
     private int nbdoc;
     private int maxC=100;
 
@@ -34,7 +28,7 @@ public class Bibliotheque {
             listdoc[i +1]=listdoc[i];
             i--;
         }
-        listdoc[i + 1] = d;
+        listdoc[i +1] = d;
         nbdoc++;
     }
 
@@ -54,57 +48,59 @@ public class Bibliotheque {
     public void Inventaire_doc() {
         for (int i =0; i < nbdoc; i++) {
             if (listdoc[i] instanceof Livre) {
-                System.out.println( this.toString()  +"cest un livre");
+                System.out.println( listdoc[i] +"cest un livre");
             }
             else if (listdoc[i] instanceof Article) {
-                System.out.println( this.toString() +"cest un artcle");
+                System.out.println( listdoc[i] +"cest un artcle");
 
             }
             else if (listdoc[i] instanceof Periodique) {
-                System.out.println( this.toString()+ "cest un periodique");
+                System.out.println( listdoc[i] + "cest un periodique");
 
             }
             else {
-                System.out.println( this.toString()  +"cest un document" );
+                System.out.println( listdoc[i]  +"cest un document" );
         }
         }
 
 
     }
 
-    public void liste_livre(){
-        this.listlv = new Document[maxC];
+    Bibliotheque liste_livre(){
+        Bibliotheque b1 = new Bibliotheque();
         for (int i = 0; i < nbdoc; i++){
             if (listdoc[i] instanceof Livre){
-                listlv[i] = listdoc[i];
-            }
+                b1.ajout_doc(listdoc[i]);             }
         }
+        return b1;
     }
 
-        public void liste_document(){
-            
-        this.listdc = new Document[maxC];
+    Bibliotheque liste_document(){
+        Bibliotheque b2 = new Bibliotheque();
         for (int i = 0; i < nbdoc; i++){
             if (listdoc[i] instanceof Document){
-                listlv[i] = listdoc[i];
+                b2.ajout_doc(listdoc[i]); 
             }
         }
+        return b2;
     }
-        public void liste_article(){
-        this.listar = new Document[maxC];
+    Bibliotheque  liste_article(){
+        Bibliotheque b3 = new Bibliotheque();
         for (int i = 0; i < nbdoc; i++){
             if (listdoc[i] instanceof Article){
-                listlv[i] = listdoc[i];
+                b3.ajout_doc(listdoc[i]); 
             }
         }
+        return b3;
     }
-        public void liste_periodique(){
-        this.listper = new Document[maxC];
+    Bibliotheque liste_periodique(){
+        Bibliotheque b4 = new Bibliotheque();        
         for (int i = 0; i < nbdoc; i++){
             if (listdoc[i] instanceof Periodique){
-                listlv[i] = listdoc[i];
+                b4.ajout_doc(listdoc[i]); 
             }
         }
+        return b4;
     }
 
 }

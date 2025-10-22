@@ -13,11 +13,11 @@ public class Article extends Document {
         return auteur;
     }
 
-    @Override
     public String Edition() {
         return "Article";
     }
 
+    @Override
     public String toString() {
         return super.toString() + ", auteur=" + auteur;
     }

@@ -13,13 +13,8 @@ public class Livre extends Article {
     }
 
     @Override
-    public String Edition() {
-        return "livre";
-    }
-
     public String toString() {
         return super.toString() + ", editeur=" + editeur;
     }
-
 }
 

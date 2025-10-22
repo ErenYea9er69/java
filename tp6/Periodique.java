@@ -12,10 +12,10 @@ public class Periodique extends Document {
         return frequence;
     }
 
-    @Override
     public String Edition() {
         return "Periodique";
     }
+    @Override
     public String toString() {
         return super.toString() + ", frequence=" + frequence;
     }

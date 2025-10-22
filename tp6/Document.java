@@ -28,6 +28,6 @@ public class Document {
     }
 
     public String toString() {
-        return "Document titre=" + titre + ", numIdentification=" + numIdentification + ", nbPages=" + nbPages ;
+        return "titre=" + titre + ", numIdentification=" + numIdentification + ", nbPages=" + nbPages ;
     }
 }
