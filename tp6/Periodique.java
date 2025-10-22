@@ -1,0 +1,23 @@
+package tp6;
+
+public class Periodique extends Document {
+    private String frequence;
+
+    public Periodique(String titre, int numIdentification, int nbPages, String frequence) {
+        super(titre, numIdentification, nbPages);
+        this.frequence = frequence;
+    }
+
+    public String getFrequence() {
+        return frequence;
+    }
+
+    @Override
+    public String Edition() {
+        return "Periodique";
+    }
+    public String toString() {
+        return super.toString() + ", frequence=" + frequence;
+    }
+
+}
