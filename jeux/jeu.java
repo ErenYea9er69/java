@@ -20,6 +20,9 @@ public class jeu {
     public void jouer(){
 
         for (int i=0; i<nb; i++){
+            if (TabCartes==null){
+                
+            
             if (TabCartes[i] instanceof terrains) {
                  terrains t = (terrains)TabCartes[i];
                     System.out.println("terrains: " + t.toString());
@@ -38,6 +41,7 @@ public class jeu {
             }
             TabCartes[nb-1]=null;
             nb--;
+        }
         }
 
 
