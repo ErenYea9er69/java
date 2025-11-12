@@ -3,7 +3,7 @@ package ds23;
 public class Pepiniere {
 
     private Plante[] iventaire ;
-    final int MAX_PLANTES = 100;
+    static final int MAX_PLANTES = 100;
     private int nbPlantes;
 
     public Pepiniere() {

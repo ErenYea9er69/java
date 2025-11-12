@@ -16,7 +16,6 @@ public class jeu {
             System.out.println(" plein");
         }
     }
-
     public void jouer(){
 
         for (int i=0; i<nb; i++){
