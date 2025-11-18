@@ -1,10 +1,9 @@
 package persone;
 
-public class Villa extends PropriétePrivee {
-
+public class Villa extends ProprietePrivee {
     private boolean avecPiscine;
 
-    public Villa(int id, personne reponsable, String adresse, int surface, int nbpieces, boolean avecPiscine) {
+    public Villa(int id, personne reponsable, String adresse, double surface, int nbpieces, boolean avecPiscine) {
         super(id, reponsable, adresse, surface, nbpieces);
         this.avecPiscine = avecPiscine;
     }
@@ -21,10 +20,11 @@ public class Villa extends PropriétePrivee {
         return super.toString() + ", avecPiscine: " + avecPiscine;
     }
 
-    private double calculImpot() {
-        
-        
-    
-}
-
+    public double calculImpot() {
+        double impot = super.calculImpot();
+        if (avecPiscine) {
+            impot += 200;
+        }
+        return impot;
+    }
 }

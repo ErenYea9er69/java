@@ -1,10 +1,9 @@
 package persone;
 
-public class Appartement extends PropriétePrivee {
-
+public class Appartement extends ProprietePrivee {
     public int numEtage;
 
-        public Appartement(int id, personne reponsable, String adresse, int surface, int nbpieces, int numEtage) {
+    public Appartement(int id, personne reponsable, String adresse, double surface, int nbpieces, int numEtage) {
         super(id, reponsable, adresse, surface, nbpieces);
         this.numEtage = numEtage;
     }
@@ -20,9 +19,4 @@ public class Appartement extends PropriétePrivee {
     public String toString() {
         return super.toString() + ", numEtage: " + numEtage;
     }
-
-
- 
-
-    
 }
